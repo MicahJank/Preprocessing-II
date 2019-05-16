@@ -172,10 +172,13 @@ img {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-bottom: 2px dashed #C0C0C0;
   padding: 20px 40px;
+}
+nav h1 {
+  margin-right: 320px;
 }
 nav a {
   text-decoration: none;
@@ -246,4 +249,13 @@ nav a {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  width: 80%;
+  background-color: #17A2B8;
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 15px;
 }
