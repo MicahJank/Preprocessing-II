@@ -4,8 +4,17 @@ nav {
     border-bottom: 2px dashed @navigation-border;
     padding: 20px 40px;
 
+    @media @mobile {
+        .basic-flex(column, center, center);
+        padding-bottom: 10px;
+    }
+
     h1 {
         margin-right: 320px;
+        @media @mobile {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
     }
 
     a {
