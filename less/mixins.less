@@ -1,5 +1,7 @@
 // Mixins in here
-.basic-flex(@direction: row) {
+.basic-flex(@direction: row, @justify: flex-start, @align: center) {
     display: flex;
     flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
 }
