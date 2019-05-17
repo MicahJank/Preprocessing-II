@@ -303,6 +303,7 @@ nav a {
   }
 }
 .home .content-pick .destination .btn {
+  border-style: none;
   width: 80%;
   background-color: #17A2B8;
   font-size: 2rem;
@@ -310,6 +311,38 @@ nav a {
   text-align: center;
   color: #FFFFFF;
   border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.home .content-pick .destination .btn:hover {
+  animation-duration: 2s;
+  animation-iteration-count: initial;
+  transform-origin: bottom;
+  animation-name: basic-bounce;
+  animation-timing-function: ease;
+}
+@keyframes basic-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  50% {
+    transform: scale(1.1, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-1px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
