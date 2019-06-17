@@ -1,1 +1,39 @@
 // Mixins in here
+.basic-flex(@direction: row, @justify: flex-start, @align: center) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.sign-up-btn(@btn-width: 80%, @btn-color: @button-bg) {
+    border-style: none;
+    width: @btn-width;
+    background-color: @btn-color;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    color: @main-bg;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+// Animations
+.bounce-animation(@bounce-height: -10px, @duration: 2s) {
+    animation-duration: @duration;
+    animation-iteration-count: initial;
+    transform-origin: bottom;
+    animation-name: basic-bounce;
+    animation-timing-function: ease;
+
+    @keyframes basic-bounce {
+        0% { transform: scale(1,1) translateY(0); }
+        10% { transform: scale(1.1,.9) translateY(0); }
+        30% { transform: scale(.9,1.1) translateY(@bounce-height); }
+
+        50% { transform: scale(1.1,.95) translateY(0); }
+        57% { transform: scale(1,1) translateY(-1px); }
+        64% { transform: scale(1,1) translateY(0); }
+        100% { transform: scale(1,1) translateY(0); }
+      }
+}
